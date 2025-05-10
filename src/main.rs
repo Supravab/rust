@@ -1,13 +1,15 @@
+use std::io;
+
 fn main() {
-    println!("Hello, world!"); //here ! is a macro
-    let a=10;
-    let b=20;
-    if a<b {
-        println!("{} is the smallest", a);
-    }
-    else {
-        println!("{} is the smallest",b);
-    }
+    println!("guess the number!");
+
+    println!("please input your guess.");
+
+    let mut guess = String::new();
+
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("failed to read line");
+
+    println!("you guessed: {}", guess);
 }
-//what is a macro?
-// macro is basically a function that can take in variable number of arguements, it can check syntax before running.
