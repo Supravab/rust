@@ -41,3 +41,11 @@ Cargo.lock doesnot change unless specified using Cargo.toml to change the versio
 We won't know which method, traits to use in a crate, so reading the documentation about the traits of a crate is necessary to use the crate properly.
 
 cargo doc --open : locally builds a documentation html about the crate;
+
+match : much like switch statement, it will compare the results, and give the output based on that.
+
+enum values : parse() and read_line function of stdin give value with enum as well, basically Ok or Err, which can help us properly use the error management in each cases, if the program should continue, diverge or end.
+
+enum is matched using match function, and the Ok(value) => value, will return the value if it is ok, true.
+if Err(_) _means unknown, if the error is there no matter the error, it will do something
+Err(_) => continue, this will ignore the error and continue
